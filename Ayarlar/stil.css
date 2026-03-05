@@ -1,0 +1,41 @@
+
+html , body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: Arial, Helvetica, sans-serif,open sans;
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: none;
+   }
+
+
+  .Menu a:link , .Menu a:hover , .Menu a:active , .Menu a:visited {
+    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+  .anamenu a:link , .anamenu a:hover , .anamenu a:active , .anamenu a:visited {
+    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, "sans-serif";
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
