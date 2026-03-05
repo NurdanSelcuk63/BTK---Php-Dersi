@@ -1,8 +1,15 @@
 <?php
 require_once "Ayarlar/ayar.php";
 require_once "Ayarlar/Fonksiyonlar.php";
-?>
+require_once "Ayarlar/sitesayfalari.php";
 
+if (isset($_REQUEST["SK"])) {
+    $SayfaKoduDegeri = $_REQUEST["SK"];
+} else {
+    $SayfaKoduDegeri = 0;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -16,6 +23,7 @@ require_once "Ayarlar/Fonksiyonlar.php";
     <meta name="Keywords" content="<?php echo $SiteAnahtarKelime; ?>">
     <script src="Frameworks/JQuery/jquery-4.0.0.js" language="javascript"></script>
     <script type="text/javascript" src="Ayarlar/Fonksiyonlar.js" language="javascript"></script>
+    <link rel="icon" type="image/png" href="Görseller/Logo.png">
     <link type="text/css" rel="stylesheet" href="Ayarlar/stil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -86,7 +94,13 @@ require_once "Ayarlar/Fonksiyonlar.php";
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td align="center" bgcolor="#f9f9f9" style="padding: 100px 0; border: 1px dashed #ccc;">
-                            <strong>Banner - İçerik Alanı</strong>
+                          <?php
+if (!$SayfaKoduDegeri || $SayfaKoduDegeri == "" || $SayfaKoduDegeri == 0) {
+   include ($Sayfa[0]);
+} else {
+   include ($Sayfa[$SayfaKoduDegeri]);
+}
+?>
                         </td>
                     </tr>
                 </table>
